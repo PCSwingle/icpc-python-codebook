@@ -6,18 +6,18 @@ Italicized items have not yet been implemented.
 
 * _Sparse Lazy Segment Tree_
 * _Fenwick Tree_
-* _Dinic's Max-flow_
+* Dinic's Max-flow
 * _Push-Relabel Max-flow_
 * _Min-cost Max-flow_
 * _Min/Max Heap with Update_
 * _Binary Search_
-* _Union Find_
+* Union Find
 * _Min-Span Tree_
-* _Matrices_
-* _Exponentiation by Squaring_
+* Matrices
+* Exponentiation by Squaring
 * _Simplex_
-* _Eratosthene's Sieve_
-* _Miller-Rabin_
+* Eratosthene's Sieve
+* Miller-Rabin
 * _Pollard-Rho_
 * _Bellman-Ford_
 * _Floyd-Warshall_
@@ -26,6 +26,12 @@ Italicized items have not yet been implemented.
 * _Graph Coloring_
 * _Binary Lifting_
 * _Geometry Functions_
-* _Convex Hull_
+* Convex Hull
 * _Hull Diameter_
 * _KMP_
+
+# TODO
+* Add comprehensive tests for everything
+* Refactor and cleanup verbose code
+* Add automatic LaTeX / PDF generation
+* Organize algorithms
