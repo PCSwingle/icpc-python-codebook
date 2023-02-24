@@ -2,21 +2,21 @@ class UnionFind:
     def __init__(self, n):
         self.data = [i for i in range(n)]
 
-    def get_root(a):
+    def get_root(self, a):
         l = 0
-        while data[a] != a:
-            data[a] = data[data[a]]
-            a = data[a]
+        while self.data[a] != a:
+            self.data[a] = self.data[self.data[a]]
+            a = self.data[a]
             l += 1
         return (a, l)
 
-    def merge(a, b):
-        ar, al = get_root(a)
-        br, bl = get_root(b)
-        if al < bl: data[ar] = br
-        else: data[br] = ar
+    def merge(self, a, b):
+        ar, al = self.get_root(a)
+        br, bl = self.get_root(b)
+        if al < bl: self.data[ar] = br
+        else: self.data[br] = ar
 
-    def query(a, b):
-        ar, al = get_root(a)
-        br, bl = get_root(b)
+    def query(self, a, b):
+        ar, al = self.get_root(a)
+        br, bl = self.get_root(b)
         return ar == br

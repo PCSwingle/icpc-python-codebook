@@ -12,7 +12,8 @@ class Graph:
         self.source = n[s]
         self.sink = n[t]
 
-    def reset_levels(self): for node in self.nodes: node.level = -1
+    def reset_levels(self):
+        for node in self.nodes: node.level = -1
 
 def dinics(g):
     maxf = 0

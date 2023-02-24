@@ -35,15 +35,13 @@ class Matrix:
         return n
 
 import copy
-def exp(a, p, m): # a^p % m, must be square matrix
-    assert a.w==a.h
-    b = bin(p)[2:]
-    ans = Matrix(a.w, a.h)
+def exp(b, e, m):
+    assert b.w==b.h
+    a = Matrix(b.w, b.h)
     for i in range(a.w):
-        ans.m[i][i] = 1
-    na = copy.deepcopy(a)
-    for i in reversed(b):
-        if i == '1':
-            ans = (ans * na) % m
-        na = (na * na) % m
-    return ans
+        a.m[i][i] = 1
+    while e > 0:
+        if e & 1: a = (a*b)%m
+        b = (b*b)%m
+        e >>= 1
+    return a
