@@ -2,7 +2,7 @@
 Contains algorithms for competitive programming contests such as ICPC in Python.
 
 # Algorithms
-Italicized items have not yet been implemented. Bolded items have been implemented but do have comprehensive tests set up.
+Italicized items have not yet been implemented. Bolded items have been implemented but do not have comprehensive tests set up.
 
 * _Sparse Lazy Segment Tree_
 * _Fenwick Tree_
