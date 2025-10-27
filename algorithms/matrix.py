@@ -34,7 +34,6 @@ class Matrix:
                 n.m[i][j] = self.m[i][j] % m
         return n
 
-import copy
 def exp(b, e, m):
     assert b.w==b.h
     a = Matrix(b.w, b.h)
