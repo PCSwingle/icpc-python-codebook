@@ -18,3 +18,16 @@ def pollardrho(n): # returns ONE not-necessarily-prime divisor of n
         d = math.gcd(abs(x-y), n)
         if (d == n): return pollardrho(n)
     return d
+
+def prfactorize(n) -> list[int]:
+    stack = [n]
+    primes = []
+    while stack:
+        cur = stack.pop()
+        nex = pollardrho(cur)
+        if cur == nex:
+            primes.append(nex)
+        else:
+            stack.append(cur // nex)
+            stack.append(nex)
+    return primes
