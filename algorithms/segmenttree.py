@@ -6,13 +6,12 @@ for i in range(n - 1, 0, -1):
 
 def update(p, value): 
     p = p + n
-    tree[p] = value; 
-    i = p   
-    while i > 1:
-        tree[i >> 1] = tree[i] + tree[i ^ 1] # change op
-        i >>= 1
+    tree[p] = value
+    while p > 1:
+        tree[p >> 1] = tree[p] + tree[p ^ 1] # change op
+        p >>= 1
 
-def query(l, r):
+def query(l, r): # [l, r)
     res = 0
     l += n
     r += n
