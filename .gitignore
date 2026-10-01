@@ -2,6 +2,7 @@ _minted*/
 *.aux
 *.pdf
 *.log
+.idea/
 
 # pre-generated
 

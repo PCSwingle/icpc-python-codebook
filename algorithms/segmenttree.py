@@ -12,7 +12,7 @@ def update(p, value):
         p >>= 1
 
 def query(l, r): # [l, r)
-    res = 0
+    res = 0 # Change with op
     l += n
     r += n
     while l < r:
