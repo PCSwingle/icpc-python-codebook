@@ -24,6 +24,7 @@ Italicized items have not yet been implemented. Bolded items have been implement
 * _Floyd-Warshall_
 * _Cycle-detection_
 * _Tree Diameter_
+* __Tarjan's Bridge Finding Algorithm__
 * __Tarjan's Algorithm__
 * _2-SAT_
 * _Graph Coloring_
@@ -34,7 +35,7 @@ Italicized items have not yet been implemented. Bolded items have been implement
 * _KMP_
 * _Rolling Hash_
 * _FFT_
-* _Cartesian Tree_
+* __Cartesian Tree__
 * _Implicit Treap_
 
 # TODO
