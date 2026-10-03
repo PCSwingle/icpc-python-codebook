@@ -12,6 +12,7 @@ Italicized items have not yet been implemented. Bolded items have been implement
 * _Min-cost Max-flow_
 * _Min/Max Heap with Update_
 * _Binary Search_
+* _Ternary Search_
 * Union Find
 * _Min-Span Tree_
 * Matrices
@@ -31,12 +32,13 @@ Italicized items have not yet been implemented. Bolded items have been implement
 * _Binary Lifting_
 * _Geometry Functions_
 * Convex Hull
-* _Hull Diameter_
+* __Hull Diameter__
 * _KMP_
 * _Rolling Hash_
 * _FFT_
 * __Cartesian Tree__
 * _Implicit Treap_
+* _Mobius Function_
 
 # TODO
 * Add comprehensive tests for everything
