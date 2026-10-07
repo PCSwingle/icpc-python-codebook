@@ -13,11 +13,12 @@ def _build(v, tl, tr):
         t[v] = min(t[v*2], t[v*2 + 1]) # change op
 _build(1, 0, n - 1)
 
-def _push(v):
-    # change with op
-    t[v*2] += lazy[v]
+def _push(v, tl, tr):
+    tm = (tl + tr) // 2
+
+    t[v*2] += lazy[v] # * (tm - tl + 1) # range sum
     lazy[v*2] += lazy[v]
-    t[v*2+1] += lazy[v]
+    t[v*2+1] += lazy[v] # * (tr - tm) # range sum
     lazy[v*2+1] += lazy[v]
     lazy[v] = 0
 
@@ -25,10 +26,10 @@ def _update(v, tl, tr, l, r, add):
     if l > r:
         return
     if l == tl and tr == r:
-        t[v] += add
+        t[v] += add # * (tr - tl + 1) # range sum
         lazy[v] += add
     else:
-        _push(v)
+        _push(v, tl, tr)
         tm = (tl + tr) // 2
         _update(v*2, tl, tm, l, min(r, tm), add)
         _update(v*2+1, tm+1, tr, max(l, tm+1), r, add)
@@ -36,10 +37,10 @@ def _update(v, tl, tr, l, r, add):
 
 def _query(v, tl, tr, l, r):
     if l > r:
-        return 2**64 # change with op
+        return float('inf') # change with op
     if l == tl and tr == r:
         return t[v]
-    _push(v)
+    _push(v, tl, tr)
     tm = (tl + tr) // 2
     return min(_query(v*2, tl, tm, l, min(r, tm)),
                _query(v*2+1, tm+1, tr, max(l, tm+1), r)) # change op
@@ -47,7 +48,7 @@ def _query(v, tl, tr, l, r):
 def query(l, r): # [l, r)
     return _query(1, 0, n - 1, l, r - 1)
 
-def update(ix, value):
+def update(ix, value): # sets index
     _update(1, 0, n - 1, ix, ix, value - query(ix, ix + 1))
 
 def update_range(l, r, add): # [l, r)
