@@ -33,11 +33,13 @@ Italicized items have not yet been implemented. Bolded items have been implement
 * _Geometry Functions_
 * Convex Hull
 * __Hull Diameter__
+* _Aho Corasick_
 * _KMP_
 * _Rolling Hash_
 * _FFT_
 * __Cartesian Tree__
 * _Implicit Treap_
+* _Link-Cut Tree_
 * _Mobius Function_
 
 # TODO

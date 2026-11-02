@@ -16,3 +16,14 @@ for i in range(n):
         parents[i] = s[-1]
     s.append(i)
 root = s[0]
+
+# pre-order traversal
+order = []
+s = [root]
+while s:
+    cur = s.pop()
+    order.append(cur)
+    if r_children[cur] is not None:
+        s.append(r_children[cur])
+    if l_children[cur] is not None:
+        s.append(l_children[cur])
